@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>login</title>
+    <script>
+      function conditionsForSubmit() {
+        if (
+          document.getElementById("username").value == "" ||
+          document.getElementById("password").value == ""
+        ) {
+          btClick.disabled = true;
+        } else {
+          btClick.disabled = false;
+          window.open("profile.html");
+        }
+      }
+    </script>
+  </head>
+  <body style="background-color: bisque">
+    <h2>Login</h2>
+
+    <form>
+      <label style="height: 60px">UserName : </label>
+      <input type="text" name="username" id="username" required /> <br />
+      <br />
+      <label style="height: 60px">Password : </label>
+      <input type="password" id="password" required /><br />
+      <br />
+      <input type="submit" id="btClick" onclick="conditionsForSubmit()" />
+
+      <br />
+      <br /><br />
+      <br />
+      <a href="registration.html"> Create an account</a>
+    </form>
+  </body>
+</html>

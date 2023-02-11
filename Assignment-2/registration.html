@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>registration</title>
+
+    <script>
+      function nextPage() {
+        //Password checking
+        var password = document.getElementById("passwordText").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+        if (password != confirmPassword) {
+          alert("Passwords do not match!!!");
+          return false;
+        }
+        var firstname = document.getElementById("firstname").value;
+        localStorage.setItem("firstname", firstname);
+        var lastname = document.getElementById("lastname").value;
+        localStorage.setItem("lastname", lastname);
+        var dob = document.getElementById("date").value;
+        localStorage.setItem("date", dob);
+        var gender = document.getElementById("gender").value;
+        localStorage.setItem("gender", gender);
+
+        //next page navigation
+        window.open("profile.html");
+      }
+    </script>
+  </head>
+  <body style="background-color: bisque">
+    <h1><center>Registration Form</center></h1>
+    <form action="profile.html" onsubmit="nextPage()">
+      <label style="height: 60px">UserName : </label>
+      <input type="text" name="username" id="username" /><br />
+      <br />
+      <label style="height: 60px">First Name : </label>
+      <input type="text" id="firstname" /><br />
+      <br />
+      <label style="height: 60px">Last Name : </label>
+      <input type="text" id="lastname" /><br />
+      <br />
+      <label style="height: 60px">Date Of Birth : </label>
+      <input type="date" id="date" /><br />
+      <br />
+      <div id="gender">
+        <label style="height: 60px">Gender : </label>
+        <label style="height: 60px">Male</label
+        ><input type="radio" name="male" />
+        <label style="height: 60px">Female</label
+        ><input type="radio" name="female" />
+        <label style="height: 60px">Others</label
+        ><input type="radio" name="others" />
+      </div>
+      <br />
+
+      <label style="height: 60px">Password : </label>
+      <input type="password" id="passwordText" /><br />
+      <br />
+      <label style="height: 60px">Confirm Password : </label>
+      <input type="password" id="confirmPassword" /><br />
+      <br />
+      <br /><br /><br /><br />
+
+      <button onclick="nextPage()">SUBMIT</button> <br /><br />
+
+      <button name="button" style="color: grey" value="OK" type="button">
+        CANCEL</button
+      ><br /><br />
+      <br />
+
+      <div id="test"></div>
+
+      <br /><br />
+      <br />
+      <a href="login.html">Already have an account</a>
+    </form>
+  </body>
+</html>

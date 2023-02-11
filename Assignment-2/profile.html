@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile </title>
+</head>
+    <body style="background-color: bisque">
+        <h1><center>User Profile Page</center></h1>
+        <div id="result-table">
+                <table border="1">
+                    <tr>
+                        <th>First name</td>
+                        <th>Last name</td>
+                        <th>DOB</th>
+                        <th>Gender</td>
+                    </tr>
+                    <tr>
+                        <td id="first"></td>
+                        <td id="second"></td>
+                        <td id="third"></td>
+                        <td id="fourth"></td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+
+        <script>
+            window.onload = function() {
+                document.getElementById('first').innerText = localStorage.getItem('firstname');
+                document.getElementById('second').innerText = localStorage.getItem('lastname');
+                document.getElementById('third').innerText = localStorage.getItem('date');
+                document.getElementById('fourth').innerText = localStorage.getItem('gender');
+
+            };
+        </script>
+        <form action="registration.html">
+            <button >Go Back</button>
+        </form>
+    </body>
+</html>
